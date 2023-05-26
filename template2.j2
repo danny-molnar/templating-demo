@@ -1,0 +1,9 @@
+---
+version: 2
+updates:
+{% for package in packages %}
+  - package-ecosystem: {{package}}
+    directory: '/**/*'
+    schedule:
+      interval: 'daily'
+{% endfor %}
